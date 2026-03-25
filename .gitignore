@@ -1,2 +1,12 @@
+# Ejecutables
 *.out
 *.exe
+ej*
+
+# Tests
+tests/
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
