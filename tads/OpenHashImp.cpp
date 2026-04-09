@@ -65,6 +65,8 @@ public:
             if(current->key == key) return current->value;
             current = current->next;
         }
+
+        return V();
     }
 
     bool contains(K key)
