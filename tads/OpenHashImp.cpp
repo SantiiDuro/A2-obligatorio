@@ -1,10 +1,10 @@
 #ifndef OPENHASH_IMP
 #define OPENHASH_IMP
 
-#include "OpenHash.h"
+#include "Hash.h"
 
 template <class K, class V>
-class OpenHashImp : public OpenHash<K, V> 
+class OpenHashImp : public Hash<K, V> 
 {
 public:
     OpenHashImp(int expected, int (*hashFunc)(K))

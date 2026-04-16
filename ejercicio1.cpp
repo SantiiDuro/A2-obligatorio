@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 #include <limits>
-#include "tads/OpenHash.h"
+#include "tads/Hash.h"
 #include "tads/OpenHashImp.cpp"
 
 using namespace std;

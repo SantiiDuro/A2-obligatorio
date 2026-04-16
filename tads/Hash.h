@@ -1,11 +1,11 @@
-#ifndef OPENHASH_H
-#define OPENHASH_H
+#ifndef HASH_H
+#define HASH_H
 
 template <class K, class V>
-class OpenHash
+class Hash
 {
 public:
-    virtual ~OpenHash() {}
+    virtual ~Hash() {}
     virtual void insert(K key, V value) = 0;
     virtual V get(K key) = 0;
     virtual bool contains(K key) = 0;
