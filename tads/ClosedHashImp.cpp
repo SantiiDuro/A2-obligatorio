@@ -39,6 +39,22 @@ public:
         count++;
     }
 
+    void update(K key, V value)
+    {
+        int i = 0;
+        int index = calculateIndex(key, i);
+        while (table[index].occupied || table[index].deleted)
+        {
+            if (table[index].occupied && !table[index].deleted && table[index].key == key)
+            {
+                table[index].value = value;
+                return;
+            }
+            i++;
+            index = calculateIndex(key, i);
+        }
+    }
+
     V get(K key)
     {
         int i = 0;
@@ -83,6 +99,25 @@ public:
             i++;
             index = calculateIndex(key, i);
         }
+    }
+
+    bool isOccupiedAt(int index)
+    {
+        return table[index].occupied && !table[index].deleted;
+    }
+
+    K getKeyAt(int index)
+    {
+        return table[index].key;
+    }
+
+    V getValueAt(int index)
+    {
+        return table[index].value;
+    }
+
+    int getSize() {
+        return size;
     }
 
 private:
