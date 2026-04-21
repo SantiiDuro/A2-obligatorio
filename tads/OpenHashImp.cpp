@@ -2,6 +2,7 @@
 #define OPENHASH_IMP
 
 #include "Hash.h"
+#include "../funciones/enteros.cpp"
 
 template <class K, class V>
 class OpenHashImp : public Hash<K, V> 
@@ -114,22 +115,6 @@ private:
     int size;
     int count;
     int (*hashFunction)(K);
-
-    bool isPrime(int num)
-    {
-        if (num < 2) return false;
-        for (int i = 2; i * i <= num; i++)
-        {
-            if (num % i == 0) return false;
-        }
-        return true;
-    }
-
-    int nextPrime(int num)
-    {
-        while (!isPrime(num)) num++;
-        return num;
-    }
 };
 
 #endif
