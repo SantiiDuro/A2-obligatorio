@@ -95,6 +95,7 @@ int main()
 
     hashSize = hash->getSize();
     winner = maxScoreCompetition(hash, hashSize);
+
     cout << winner << endl;
 
     delete hash;
