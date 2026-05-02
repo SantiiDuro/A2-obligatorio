@@ -1,8 +1,8 @@
-#include <cstddef>
-#include <cassert>
 #ifndef ADJACENCY_LIST_IMP
 #define ADJACENCY_LIST_IMP
 
+#include <cstddef>
+#include <cassert>
 #include "NodeList.cpp"
 #include "Graph.h"
 
