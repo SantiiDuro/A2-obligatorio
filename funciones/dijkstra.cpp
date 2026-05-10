@@ -1,4 +1,3 @@
-// funciones/dijkstra.cpp
 #ifndef DIJKSTRA_IMP
 #define DIJKSTRA_IMP
 
