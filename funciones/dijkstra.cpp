@@ -51,7 +51,7 @@ int* dijkstra(Graph* graph, int source)
                 int w = adjacents->element.to;
                 int edgeCost = adjacents->element.weight;
 
-                if (cost[w] > cost[currentVertex] + edgeCost)
+                if (!visited[w] && cost[w] > cost[currentVertex] + edgeCost)
                 {
                     cost[w] = cost[currentVertex] + edgeCost;
                     parent[w] = currentVertex;
