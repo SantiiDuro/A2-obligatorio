@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Compile
-g++ -o ej6 ejercicio6.cpp -std=c++11
+g++ -o ej8 ejercicio8.cpp -std=c++11
 
 if [ $? -ne 0 ]; then
     echo "Compilation failed"
@@ -9,7 +9,7 @@ if [ $? -ne 0 ]; then
 fi
 
 # Test directory
-TEST_DIR="tests/ejercicio6"
+TEST_DIR="tests/ejercicio8"
 
 # Counters
 PASSED=0
@@ -22,7 +22,7 @@ for input in $TEST_DIR/*.in.txt; do
     expected="$TEST_DIR/$name.out.txt"
     
     # Run test
-    ./ej6 < "$input" > temp.out.txt
+    ./ej8 < "$input" > temp.out.txt
     
     # Compare
     if diff -q temp.out.txt "$expected" > /dev/null; then
@@ -35,7 +35,7 @@ for input in $TEST_DIR/*.in.txt; do
 done
 
 # Cleanup
-rm -f temp.out.txt ej6
+rm -f temp.out.txt ej8
 
 # Summary
 echo ""
